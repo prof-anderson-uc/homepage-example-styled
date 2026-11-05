@@ -1,6 +1,6 @@
 body {
     background-color: #fffbeb;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .wrapper {
@@ -12,7 +12,8 @@ header {
     background-color: #c0cac9;
     justify-content: center;
     align-items: center;
-    padding: 2em;
+    padding: 2rem;
+    gap: 2rem;
 }
 
 header h2 {
@@ -21,49 +22,56 @@ header h2 {
     font-weight: normal;
 }
 
-header img {
-    border: 5px solid silver;
-    box-shadow: 1px 10px 10px -10px black;
-    transition: all 1s ease;
-}
-
-header img:hover {
-    
-    transform: scale(1.2) rotate(-10deg);
-}
-
 header h1 {
     font-size: 325%;
 }
 
+/* The figure contains the image and caption */
 .me {
-    margin-left: 50px;
     width: 200px;
+    text-align: center;
+}
+
+/* Style only the image inside the figure */
+.me img {
+    border: 5px solid silver;
     border-radius: 2rem;
+    box-shadow: 1px 10px 10px -10px black;
+}
+
+/* Style the caption below the image */
+.me figcaption {
+    font-size: 80%;
+    color: #546880;
+    margin-top: 0.5rem;
 }
 
 main {
-    font-size: 145%;
-    padding: 1rem 2rem;
-    line-height: 1.4;
-    width: 960px;
+    max-width: 70rem;
     margin: 0 auto;
+    font-size: 145%;
+    line-height: 1.4;
+    padding: 1rem 2rem;
 }
 
 footer {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: #c0cac9;
-    padding: 1em;
-    font-size: 160%;
+    padding: 1rem;
 }
 
 footer a {
+    font-size: 160%;
     color: #546880;
-    transition: all 1s ease;
 }
 
 footer a:hover {
     color: rgba(255, 255, 255, 0.757);
-    transform: scale(1.5);
+}
+
+/* Prevent images from overflowing their containers */
+img {
+    max-width: 100%;
 }
